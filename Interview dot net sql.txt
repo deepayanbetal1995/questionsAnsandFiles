@@ -1,0 +1,307 @@
+1)	OOPs property: -
+i)	Encapsulation: - It is a process to wrap code and data into a single unit.
+ii)	Abstraction: - It is a process to hiding implementation details from user, only shows the features.
+iii)	Polymorphism: - It is an ability of an object to take many forms.
+iv)	Inheritance: - Inheritance is a mechanism of an object to acquire all the properties of the parent object or class.
+2)	What is polymorphism?
+Polymorphism is an ability of an object to take many forms.
+It can be two types. Dynamic polymorphism or Run time polymorphism and static polymorphism or compile time polymorphism.
+
+3)	Dynamic Polymorphism or Dynamic Method Dispatch: -
+It is a process to overridden method is called through the reference variable of a super class. It is called dynamic method dispatch.
+Dynamic method dispatch in C#:
+C# supports Single Dispatch and C# does not support Multiple Dispatch
+4) What is Enum?
+	An Enum is used to assign constant names to a group of numeric integer values. It makes more readable. WeekDays.Monday is more readable than number 0 when referring to the day in a week.
+5) What is Cross page posting?
+	ASP.Net by default submits the forms on same page. In cross page posting a form is submitted on the different page. This is required when you are creating multi page form to collect information from the user on each page.
+	"To use cross-page posting, you have to use the "postBackUrl" attribute to specify the page we want to post".
+
+6) Validators in ASP.Net?
+	There are 6 validators in ASP.Net. 
+1) Required Field Validator
+2) Range Validator
+3) Compare Validator
+4) Regular Expression Validators
+5) Custom Validators
+6) Validation Summary 
+
+7) Get and Post in API?
+	Get is used to request data from a specified resource. 
+Post is used to send data to server to create or update a resource.
+8) Component of ADO.Net? Difference between them.
+	DataSet and DataProvider are the components of ADO.Net.
+Data provider is used to connect to the database, execute commands and retrieve the record. Data provider for SQL Server classes is located in the System.Data.SqlClient namespace.
+DataSet is a collection of data tables that contains the data. 
+
+9) Difference between web site and web application?
+	Website is a group of globally accessible interlinked web pages which have a single domain name. 
+A web application is a software or program which is accessible using any web browser.
+10) What is ViewState and Session state?
+	ViewState is a technique to maintain the state of controls during page post-back. Meaning it stores the page value at the time of post-back of the page and the view state data can be used when the page is post back to the server and a new instance is created.
+	View state is nothing but a serialized base-64 encoded string stored in a hidden input on the page.
+Session state is another state management technique to store state, meaning it helps in storing and using values from previous request. An ASP.NET session will be used to store the previous requests for a specified time period.
+
+Now it can be stored either on Internet Information Service (IIS) that is by default our ‘inproc’ mode or it can be stored in a state or SQL Server that is our ‘outproc’ mode.
+
+11) Can an ASP.Net web app run without web.config?
+	Yes, ASP.Net application can run without web.config file. Then it will take Machine.config file for default configurations. But you will not able to debug the application as debugging is turned off by default in machine.config file.
+12) What is meant by coalesce in SQL?
+	The COALESCE() function returns first non-null value in a list.
+13) Function vs stored procedure?
+	i) The function must return a value but in stored procedure it is optional.
+	ii) Function can have only input parameter for it whereas Procedure can have input or output parameters.
+	iii) Function can be called from procedure whereas procedure cannot be called from a function.
+14) Truncate vs delete vs drop in sql?
+	Truncate SQL query remove all rows from a table. Truncate is faster than DELETE.
+	DELETE query deletes all the records from a database table.
+	DROP table query remove one or more table definition and all data, indexes, triggers, constrains, permission specification for those tables.
+
+
+15) What is Left Join?
+	The Left Join keyword returns all records from the left table and the matched records from the right table. The result will be null from the right side, if there is no match.
+
+16) What is Cartesian join?
+	A Cartesian join is a join of every row of one table to every row of another table.
+17) ASP.net page life cycle event?
+	PreInit : Preinit is the first event in page life cycle. It checks the IsPostBack property and determine wheather the page is a postback. It sets the themes and master page, create dynamic controls and get set the profile property values. This event can be handled by overloading the OnPreinit ethod or creating a Page_Preinit handler.
+	Init : Init event initializes the control property and the control tree is built.
+	InitComplete: InitComplete event allows tracking of view state. All the controls turn on view-state tracking.
+	LoadViewState : Loading view state event allows loading view state information into the controls.
+	LoadPostData : During this phase the contents of all the inputs in <form> tag is processed.
+	PreLoad : PreLoad occurs before the post back data is loaded in the in the controls. 
+Load :
+LoadComplete:
+PreRender:
+Render:
+Render Complete:
+
+
+18) What is PostBack and CallBack?
+	PostBack :- It is a process to submitting an ASP.Net page to the server for processing.
+	CallBack :- A CallBack is generally a call for execution of a function after another function is completed.
+19) boxing and unboxing?
+	Boxing is the process of converting a value type to the object type or any interface type implemented by this value type. Boxing is implicit.
+e.g:- int i = 10;
+	object o = i ; // perform boxing
+integer variable I is assigned to object o. 
+Unboxing is the reverse of boxing. It converts a reference type to value type. Unboxing extracts the value from the reference type and assign it to a value type.
+e.g: object o = 10;
+int i = ( int ) o;//perform unboxing.
+20) what is constructor?
+	It is a special method of the class that is automatically invoked when an instance of the class is created.
+21) kind of constructor?
+	There are 5 types of constructor. 
+	i) Default constructor :- A constructor without any parameter is called default constructor. If we do not create constructor the class will automatically call default constructor when the object is created.
+	2) Parameterized constructor :- A constructor with at least one parameter is called a parameterized constructor.
+	3) Copy constructor :- The constructor which creates an object by copying variables from another object is called copy constructor.
+	4) Static constructor :- Static constructor is used to initialize any static data, or perform a particular action that needs to be performed once only. It is called automatically before the first instance is created or any static members are referenced.
+	A static constructor does not have a parameter.
+	5) Private constructor :- A private constructor is a special instance constructor. It is generally used in classes that contain static members only.
+22) Why interface provide 100% polymorphism? 
+	Because interface by default public. Interface is a contract. If any change happened in interface then the implemented class also affected.
+23) non abstract class in interface
+	
+24) static constructor in interface?
+	An interface can have a static constructor which can be used to initialize static data members.
+25) parameterize constructor in interface?
+	No a interface cannot have constructor.
+26)acid property?
+	A :- Atomicity: The entire transaction takes place at once or doesn’t happen at all.
+	C :- Consistency : The database must be consistent before and after the transaction.
+	I :- Isolation : Multiple transaction occur independently without interference.
+	D :- Durability : The changes of a successful transaction occurs even if the system failure occurs.
+27) Indexing and how many types of indexing?
+28) design pattern
+29) gzip and broadly
+	Gzip – GNU Zip When referring to HTTP and content-encoding, HTTP/1.1 introduced gzip as a way for web server to compress content before sending it to the visitor. Using gzip a page loads faster because of the smaller size and can also reduce overall brandwidth costs.
+
+30) bundling: - Bundling  is a process to load the bunch of static files on one single request. It is used to improve the request load time.
+ Minification: - Minification is a process to optimize the size of scripts or css files by removing the unwanted spaces and comments and short the variable name to one character.
+31) Inheritance can inherit from abstract class
+32) static constructor
+33) By reference and by value
+34) ib rendering
+35) zone.js
+36) common table expression sql server
+	CTE allows to define a temporary named result set that available temporarily in the execution scope of a statement such as Select, Insert, Update, Delete or Merge.
+
+CTE vs temp table: - This biggest difference is that a CTE can only be used in the current query scope whereas a temporary table or table variable can exist for the entire duration of the session allowing you to perform many different DML operations against them. 
+37) task async await c#
+	Async and await are code markers, which marks code positions from where the control should resume after a task completes.
+38) Structure vs class
+	Class:- 
+	i) A class is a user defined blueprint or prototype from which objects can created. Basically, a class combines the fields and methods into a single unit. 
+ii) Class are of reference type.
+iii) Class can contain constructor or destructor.
+	Structure:-
+	A structure is a collection of variables of different data types under a single unit.
+ii) Structures are value type.
+iii) Structure can contain parameterized constructor or static constructor.
+39) call one constructor from another c#
+	By using this keyword we can call an overloaded constructor from other constructor.
+e.g:- 	class x
+{
+	public x : this()
+	{
+}
+}
+40) by performance array and list in c#
+	Array is faster than arraylist. Because in ArrayList it uses a fixed amount of array. It perform boxing and unboxing while working with it so it is slower than array.
+41) constructor in abstract class
+	Yes an abstact class can have a constructor.
+42) virtual vs abstract c#
+	An abstract method must be call override in derived class other wise it will give compile time error and in virtual you may and may not override.
+43) plugin for dependency injection c#
+44) DI and IoC
+	Dependency Injection is a design pattern used to implement IoC. It allows the creation of dependent objects outside of a class and provide those objects to a class through different way. 
+	IoC  is a generic term of 
+
+45) non abstract method in interface in c#?
+	No. Because Interface methods are by definition public and abstract, so you cannot have non abstract method in interface.
+
+46) interface can inherit from abstract class c# 
+	No. But an abstract class can implement an interface.
+47) constructor in interface in c#?
+	Constructor in an interface is not allowed. But in abstract class allows the constructor.
+48) AOT in .net?
+	AOT compilation is the act of compiling a higher -level programming language to native machine code.
+49) What is interface?
+	An interface contains definitions for group of related functionalities that a non-abstract class or a struct must implement. An interface may define static methods, which must have an implementation.
+50) for vs foreach?
+	i) For loop executes a block of code until an expression returns false.
+	ForEach loop executed a block of code through the items in an object collections.
+ii) For loop can execute with object collections or without any object collection.
+ForEach loop can execute with object collection.
+
+* Performance and speed wise for loop is better than ForEach loop.
+51) Singleton vs static?
+	We cannot create an instance of static class in c#. 
+	But we can create a single instance of a singleton class and then can reuse that singleton instance.
+
+
+52) extension method in c#?
+	Extension methods allows developers to extend functionality of an existing type without creating a new derived type, recompiling, or otherwise modifying the original type. Extension method is special kind of static method that is called as if it was an instance methods on the extended type.
+53) delegate windows form, wpf form
+
+54)  index in sql?
+	Index is used to retrieve data from the database more quickly than otherwise.
+Cluster index is a type of index which sorts the data rows in the table on their key values.
+In Database there are only one clustered index per table.
+Non Clustered Index: - A non-clustered index stores the data at one location and indicates at another location. The index contains pointers to the location of that data. A single table can have many non-clustered indexes as an index in the non-clustered index is sorted in different places.
+55) down casting in c#?
+	It is a process of casting an object of base class type to a derived class type. 
+
+56) interface vs dependency injection
+
+57) Use of Virtual keyword?
+	The Virtual keyword is used to modify a method, property, indexer, or event declared in the base class and allow it to be overridden in derived class. 
+	The override keyword is used to extend or modify a virtual/abstract method, property, indexer, or event of base class into derived class.
+
+58) Why we use singleton class?
+	Singleton class allow for single allocations and instances of data. Singleton class can be achieved by making private constructor.
+	
+59) Enumarable vs Queryable :- Both IEnumarable and IQueryable are forward collection.  IQueryble inherits from IEnumarable
+IEnumarable is suitable for querying data from in-memory collections like List,Array and so on.
+IQueryable is used where the Collection connected to DB via EF and LINQ.
+
+
+60) Windows Authentication vs Forms Authentication?
+Windows Authentication refers to authentication against Windows User accounts on the box that the application is running on.
+
+Forms Authentication is a standalone method of authentication in .net forms that you can hook up to some other system such as database.
+61) Unsafe and fixed in dot net?
+Unsafe keyword tells the compiler that this code will run in unsafe mode.
+Fixed We used fixed buffer inside an unsafe context. With a fixed buffer, you can write and read raw memory without and managed overhead. Enter the fixed keyword.
+62) When to use unsafe code?
+	When the program needs to implement pointers.
+63) What is page post back and page call back?
+	Callback – callback is generally a call for execution of a function after another function has completed.
+Postback – Postback is a request sent from a client to a server from the same page that the user is already working with.	
+
+64) SOLID design principle in C#?
+	S: Single Responsibility Principle (SRP) - > Every software module should have only one reason to change.
+	O: - Open closed Principle (OSP) - > A software module/class is open for extension and closed for modification.
+	L: - Liskov substitution Principle (LSP) - > You should be able to use any derived class instead of a parent class and have it behaved in the same manner without modification.
+I: - Interface Segregation Principle (ISP)- > Client should not be forced to implement interfaces they don’t use. Instead of one fat interface, many small interfaces are preferred based on groups of methods, each one serving one submodule.
+D: - Dependency Inversion Principle (DIP) - > It state that high-level module/classes should not depend on low level modules/classes.
+
+65) What is magic table?
+	Magic Table are invisible table or virtual table. It can be looked with the help of Triggers in SQL Server. Magic table are those tables which allow you to hold inserted, deleted and updated values during insert, delete, and update DML operation on table.
+66) Output caching: - Output cache stores a copy of the finally rendered HTML pages or part of pages sent to the client. When the next client requests for this page, instead of regenerating the page, a cached copy of the page is sent, thus saving time.
+67) Data caching: - Data caching means caching data from a data source. As long as the cache is not expired, a request for the data will be fulfilled from the cache. When the cache is expired, fresh data is obtained by the data source and the cache is refilled.
+68) Object caching: - Object caching is caching the objects on a page, such as data-bound controls. The cached data is stored in server memory.
+69) class caching: - Web pages or web services are compiled into a page class in the assembly, when run for the first time. Then the assembly is cached in the server. Next time when a request is made for the page or service, the cached assembly is referred to. When the source code is changed, the CLR recompiles the assembly.
+70) Configuration caching: - Application wide configuration information is stored in a configuration file. Configuration caching stores the configuration information in the server memory.
+71) ways of Submitting a page values to another in .net ?
+	Session, Response.Redirect, Application variable, Cookies, HttpContext
+Response.Redirect
+SET :
+Response.Redirect("Defaultaspx?Name=Pandian");
+GET :
+string Name = Request.QueryString["Name"];
+Cookies
+SET :
+HttpCookie cookName = new HttpCookie("Name");
+cookName.Value = "Pandian"; 
+GET : 
+string name = Request.Cookies["Name"].Value;
+Application Variables
+SET :
+Application["Name"] = "pandian";
+GET : 
+string Name = Application["Name"].ToString();
+
+72) Datareader vs DataAdapter?
+DataReader is used to read the data from database and it is a read and forward only connection oriented architecture during fetch the data from database. DataReader will fetch the data very fast when compared with dataset. Generally we will use ExecuteReader object to bind data to datareader.
+
+DataAdapter is for retrieve data from data sourse and populate table within a dataset.
+
+73) Difference between Controller and ApiController ?
+	Web API controllers are derived from ApiController and MVC controllers are derived from Controller.
+Web Api controllers does not returns views, they returns serialized data. MVC controllers shows URL examples matching routing pattern.
+
+74) What is Primary key?
+	The PRIMARY KEY constraint uniquely identifies each record in a table. Primary keys must contain UNIQUE values, and cannot contain NULL values. A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).
+75) What is foreign key?
+	A foreign key is a set of attributes in a table that refers to the primary key of another table. The foreign key links these two tables.
+76) Unique key?
+	Unique key is a constraint that is used to uniquely identify a tuple in a table.
+77) What is Garbage collection?
+	The garbage collector serves as an automatic memory manager. You do not need to know how to allocate and release memory or manage the lifetime of the objects that use that memory.
+78) What is value type and what is reference type?
+	Value type: A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values.
+For example, consider integer variable int i = 100;
+Reference type: a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data.
+string s = "Hello World!!";
+
+79) Multiple inheritance in c#?
+80) What is MVC?
+81) How to send data to view?
+82) What is caching?
+Caching is a technique of storing frequently used data/information in memory, so that, when the same data/information is needed next time, it could be directly retrieved from the memory instead of being generated by the application.
+83)  Use of web.config file
+84) How can you create an empty table from an existing table? 
+Example will be -. 
+Select * into studentcopy from student where 1=2
+If 1=1 then it will give same table as student with name studentcopy.
+Where contains conditions of the join.
+Here, we are copying student table to another table with the same structure with no rows copied. 
+85) ExecuteScaler, ExecuteReader, ExecuteNonQuery
+ExecuteScalar is typically used when your query returns a single value. If it returns more, then the result is the first column of the first row.
+ExecuteReader is used for any result set with multiple rows/columns (e.g., SELECT col1, col2 from sometable).
+ExecuteNonQuery is typically used for SQL statements without results (e.g., UPDATE, INSERT, etc.).
+
+
+
+
+	
+
+
+	
+	
+
+
+
+	
+
