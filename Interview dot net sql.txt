@@ -292,6 +292,8 @@ ExecuteScalar is typically used when your query returns a single value. If it re
 ExecuteReader is used for any result set with multiple rows/columns (e.g., SELECT col1, col2 from sometable).
 ExecuteNonQuery is typically used for SQL statements without results (e.g., UPDATE, INSERT, etc.).
 
+86) What is the use of config file?
+
 
 
 
